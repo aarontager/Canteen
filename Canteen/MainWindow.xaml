@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Canteen"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="768" Width="1366">
     <Grid>
-        
+        <TabControl HorizontalAlignment="Left" Height="737" VerticalAlignment="Bottom" Width="1134">
+            <TabItem Header="TabItem" Height="25">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Admin" Height="25" Background="Orange">
+                <Grid x:Name="grdAdminPanel" Margin="10,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    
+                    <Label x:Name="lblAddCamper" Content="Add Camper" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30"/>
+                    <Label x:Name="lblRemoveCamper" Content="Remove Camper" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30"/>
+                    <Label x:Name="lblViewBalance" Content="View Balance" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30"/>
+                    <Label x:Name="lblAddBalance" Content="Add Balance" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30"/>
+                    <Label x:Name="lblProcessCharge" Content="Charge Camper" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30"/>
+
+
+                    <TextBox x:Name="txtAddCamper" Grid.Row="0" Grid.Column="0" Height="30" TextWrapping="Wrap" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" FontFamily="Tw Cen MT" FontSize="20"/>
+                    
+                    <Button x:Name="btnAddCamper" Content="ADD" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Margin="0,100,0,0"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Window>
