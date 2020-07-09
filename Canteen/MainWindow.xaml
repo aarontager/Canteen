@@ -11,10 +11,12 @@
             <ColumnDefinition Width="4*" />
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="0" Grid.Column="0" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
         
-        <TabControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <TabItem Header="Dairy" Height="25" Background="Blue">
-                <Grid x:Name="grdDairyPanel" Background="AliceBlue">
+        <TabControl Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <TabItem Header="Dairy" Height="25">
+                <Grid x:Name="grdDairyPanel" Background="LightGray">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*" />
                         <ColumnDefinition Width="1*" />
@@ -24,16 +26,328 @@
                         <RowDefinition Height="1*" />
                         <RowDefinition Height="1*" />
                     </Grid.RowDefinitions>
-                    
-                    <Border Grid.Row="0" Grid.Column="0" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                    <Border Grid.Row="0" Grid.Column="1" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                    <Border Grid.Row="1" Grid.Column="0" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                    <Border Grid.Row="1" Grid.Column="1" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+                    <Button x:Name="btnPizzaSlice" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnPizzaSlice_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+                            Pizza Slice <LineBreak/> $2.50
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnPizzaRoll" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnPizzaRoll_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+                            Pizza Roll <LineBreak/> $3.00
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnMozerallaSticks" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnMozerallaSticks_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+                            Mozzerella Sticks <LineBreak/> $1.50
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnShoreshSlice" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnShoreshSlice_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+                            Shoresh Slice <LineBreak/> $3.00
+                        </TextBlock>
+                    </Button>
                 </Grid>
             </TabItem>
-            
-            <TabItem Header="Admin" Height="25" Background="Orange">
-                <Grid x:Name="grdAdminPanel" Background="LightSkyBlue">
+
+            <TabItem Header="Meat" Height="25">
+                <Grid x:Name="grdMeatPanel" Background="LightGray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Button x:Name="btnHotDog" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnHotDog_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+                            Hot Dog <LineBreak/> $2.00
+                        </TextBlock>
+                    </Button>
+                    
+                    <Button x:Name="btnPastramiDog" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnPastramiDog_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+                            Pastrami Dog <LineBreak/> $2.75
+                        </TextBlock>
+                    </Button>
+
+                    <Button x:Name="btnBurger" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnBurger_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+                            Burger <LineBreak/> $3.25
+                        </TextBlock>
+                    </Button>
+
+                    <Button x:Name="btnPastramiBurger" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnPastramiBurger_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+                            Pastrami Burger <LineBreak/> $4.00
+                        </TextBlock>
+                    </Button>
+
+                    <Button x:Name="btnShoreshBurger" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnShoreshBurger_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+                            Shoresh Burger <LineBreak/> $5.00
+                        </TextBlock>
+                    </Button>
+
+                    <Button x:Name="btnPoppers" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnPoppers_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+                            Poppers <LineBreak/> $5.50
+                        </TextBlock>
+                    </Button>
+
+                    <Button x:Name="btnShnitzelSandwish" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnShnitzelSandwish_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+                            Shnitzel Sandwich <LineBreak/> $6.00
+                        </TextBlock>
+                    </Button>
+
+                    <Button x:Name="btnCholent" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnCholent_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+                            Cholent <LineBreak/> $3.00
+                        </TextBlock>
+                    </Button>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Parve" Height="25">
+                <Grid x:Name="grdParvePanel" Background="LightGray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Button x:Name="btnTraditionSoup" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnTraditionSoup_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Tradition Soup <LineBreak/> $1.00
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnPotatoKnish" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnPotatoKnish_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Potato Knish <LineBreak/> $1.00
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnHotPretzel" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnHotPretzel_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Hot Pretzel <LineBreak/> $1.00
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnRegFries" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnRegFries_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Regular Fries <LineBreak/> $2.50
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnSpicyFries" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnSpicyFries_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Spicy Fries <LineBreak/> $3.00
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnMixedFries" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnMixedFries_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Mixed Fries <LineBreak/> $2.75
+                        </TextBlock>
+                    </Button>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Snacks" Height="25">
+                <Grid x:Name="grdSnackPanel" Background="LightGray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Button x:Name="btnMikeIkes" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnMikeIkes_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Mike &amp; Ikes <LineBreak/> $0.25
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnZours" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnZours_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Zours <LineBreak/> $0.35
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnTaffy" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnTaffy_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Laffy Taffy <LineBreak/> $0.15
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnTaffyBar" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnTaffyBar_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Laffy Taffy Bar <LineBreak/> $1.00
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnFruitBFoot" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnFruitBFoot_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Fruit by the Foot <LineBreak/> $0.50
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnRancher" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnRancher_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Jolly Rancher <LineBreak/> $1.00
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnSourStix" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnSourStix_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Sour Sticks <LineBreak/> $1.25
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnDubbleBubble" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnDubbleBubble_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Dubble Bubble <LineBreak/> $0.10
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnMust" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnMust_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Must Gum <LineBreak/> $1.50
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnMilkMunch" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnMilkMunch_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Milk Munch <LineBreak/> $1.25
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnLaHit" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnLaHit_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            La Hit <LineBreak/> $1.35
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnKlikIn" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnKlikIn_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Klin In <LineBreak/> $1.35
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnEncore" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnEncore_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Encore <LineBreak/> $1.25
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnSuperSnacks" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnSuperSnacks_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Super Snacks <LineBreak/> $0.50
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnDipsyDoodles" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnDipsyDoodles_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Dipsy Doodles <LineBreak/> $0.35
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnPringles" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnPringles_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				Pringles <LineBreak/> $1.00
+                        </TextBlock>
+                    </Button>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Drinks" Height="25">
+                <Grid x:Name="grdDrinksPanel" Background="LightGray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Button x:Name="btnSodaBottle" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnSodaBottle_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Soda Bottle <LineBreak/> $1.50
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnSodaCan" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnSodaCan_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Soda Can <LineBreak/> $1.00
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnWater" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnWater_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Water <LineBreak/> $1.00
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnGatorade" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnGatorade_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Gatorade <LineBreak/> $1.50
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnSnapple" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnSnapple_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Snapple <LineBreak/> $1.50
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnSeltzer" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnSeltzer_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				            Seltzer Can <LineBreak/> $1.00
+                        </TextBlock>
+                    </Button>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Misc." Height="25">
+                <Grid x:Name="grdMiscPanel" Background="LightGray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Button x:Name="btnDanish" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnDanish_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				Danish <LineBreak/> $1.25
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnJumboPop" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnJumboPop_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				Jumbo Freeze Pop <LineBreak/> $0.50
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnJerky" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnJerky_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				Beef Jerky <LineBreak/> $5.00
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnSlush" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnSlush_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				Slush <LineBreak/> $1.00
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="btnCoffee" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Gray" Background="#00DDDDDD" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30" Click="btnCoffee_Click">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+				Iced Coffee <LineBreak/> $1.25
+                        </TextBlock>
+                    </Button>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Admin" Height="25">
+                <Grid x:Name="grdAdminPanel" Background="LightGray">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*" />
                         <ColumnDefinition Width="1*" />
@@ -44,6 +358,13 @@
                         <RowDefinition Height="1*" />
                         <RowDefinition Height="1*" />
                     </Grid.RowDefinitions>
+
+                    <Border Grid.Row="0" Grid.Column="0" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                    <Border Grid.Row="0" Grid.Column="1" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                    <Border Grid.Row="0" Grid.Column="2" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                    <Border Grid.Row="1" Grid.Column="0" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                    <Border Grid.Row="1" Grid.Column="1" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                    <Border Grid.Row="1" Grid.Column="2" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
                     <Label x:Name="lblAddCamper" Content="Add Camper" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30"/>
                     <TextBox x:Name="txtAddCamper" Grid.Row="0" Grid.Column="0" Height="30" TextWrapping="Wrap" Width="175" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Tw Cen MT" FontSize="20"/>
@@ -65,20 +386,19 @@
                     <TextBox x:Name="txtAddBalance" Grid.Row="1" Grid.Column="0" Height="30" TextWrapping="Wrap" Width="175" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Tw Cen MT" FontSize="20"/>
                     <Button x:Name="btnAddBalance" Content="ADD" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Margin="0,100,0,0" Click="btnAddBalance_Click"/>
 
-                    <Label x:Name="lblProcessCharge" Content="Charge Camper" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30"/>
+                    <Label x:Name="lblCharge" Content="Charge Camper" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30"/>
                     <TextBox x:Name="txtCharge" Grid.Row="1" Grid.Column="2" Height="30" TextWrapping="Wrap" Width="175" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Tw Cen MT" FontSize="20"/>
                     <Button x:Name="btnCharge" Content="CHARGE" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Margin="0,100,0,0" Click="btnCharge_Click"/>
                     <ComboBox x:Name="cmbCharge" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="175" Margin="0,0,0,100" FontFamily="Tw Cen MT" FontSize="20"/>
-                    
-                    <Border Grid.Row="0" Grid.Column="0" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                    <Border Grid.Row="0" Grid.Column="1" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                    <Border Grid.Row="0" Grid.Column="2" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                    <Border Grid.Row="1" Grid.Column="0" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                    <Border Grid.Row="1" Grid.Column="1" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                    <Border Grid.Row="1" Grid.Column="2" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+                    <Label x:Name="lblClearCharge" Content="Clear Charge" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="30"/>
+                    <Button x:Name="btnClearCharge" Content="CLEAR CHARGE" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnClearCharge_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>
+        
+        <ListBox x:Name="lbCart" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Height="600" VerticalAlignment="Top" FontFamily="Tw Cen MT" FontSize="20"/>
+        <Label x:Name="lblPrice" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" FontFamily="Tw Cen MT" FontSize="36" Margin="0,0,0,50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
     </Grid>
 </Window>
